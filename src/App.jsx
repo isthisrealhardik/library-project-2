@@ -126,7 +126,7 @@ const App = () => {
           // console.log(bookArray);
         }} />
       ))}
-      <img onClick={showAdd} src="./assets/add.svg" alt="Add" className="fixed bottom-10 left-[280px] w-[72px] shadow hover:shadow-2xl" />
+      <img onClick={showAdd} src="./assets/add.svg" alt="Add" className="fixed bottom-10 left-[280px] w-[72px]" />
       <Add addABook={addABook}/>
     </div>
   )
