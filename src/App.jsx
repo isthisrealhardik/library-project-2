@@ -116,8 +116,8 @@ const App = () => {
   console.log(bookArray);
 
   return(
-    <div className="py-6 bg-gray-100 w-screen h-full font-sans text-black flex flex-col justify-start items-center font-semibold">
-      <h1 className="uppercase mb-6 font-mono tracking-wider">Library.</h1>
+    <div className="py-6 bg-gray-100 w-screen h-full font-sans text-black flex flex-col justify-start items-center font-semibold md:grid md:grid-cols-3 place-items-center md:px-40">
+      <h1 className="uppercase mb-6 font-mono tracking-wider md:col-start-1 md:row-start-1 md:col-span-3 md:text-center">Library.</h1>
       {bookArray.map((book) => (
         <Card key={book.name} name={book.name} author={book.author} pages={book.pages} status={book.status} remove={() => {
           const newArr = [...bookArray];
@@ -126,7 +126,7 @@ const App = () => {
           // console.log(bookArray);
         }} />
       ))}
-      <img onClick={showAdd} src="./assets/add.svg" alt="Add" className="fixed bottom-10 left-[280px] w-[72px]" />
+      <img onClick={showAdd} src="./assets/add.svg" alt="Add" className="fixed bottom-10 left-[280px] w-[72px] md:left-[1100px] md:bottom-20" />
       <Add addABook={addABook}/>
     </div>
   )
