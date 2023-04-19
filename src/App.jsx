@@ -89,13 +89,17 @@ const App = () => {
             status: status.value,
         }
           setBookArray([...bookArray, objBook]);
-        } 
-        name.value = '';
-        author.value = '';
-        pages.value = '';
-        let add = document.getElementById('Add');
-        add.classList.remove("flex");
-        add.classList.add('hidden');
+
+          name.value = '';
+          author.value = '';
+          pages.value = '';
+          let add = document.getElementById('Add');
+          add.classList.remove("flex");
+          add.classList.add('hidden');
+        } else {
+          alert("Fill up the fields");
+        }
+
         // console.log(bookArray);
     }
 
